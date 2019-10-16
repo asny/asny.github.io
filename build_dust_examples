@@ -1,0 +1,8 @@
+#!/bin/sh
+
+wasm-pack build ../Dust/examples/hello_world --target web --out-name hello_world --out-dir ../../../home/dust
+wasm-pack build ../Dust/examples/lighting --target web --out-name lighting --out-dir ../../../home/dust
+
+rm dust/.gitignore
+rm dust/*.d.ts
+rm dust/package.json
