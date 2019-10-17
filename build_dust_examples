@@ -3,6 +3,9 @@
 wasm-pack build ../Dust/examples/hello_world --target web --out-name hello_world --out-dir ../../../home/dust
 wasm-pack build ../Dust/examples/lighting --target web --out-name lighting --out-dir ../../../home/dust
 wasm-pack build ../Dust/examples/texture --target web --out-name texture --out-dir ../../../home/dust
+wasm-pack build ../Dust/examples/effect --target web --out-name effect --out-dir ../../../home/dust
+wasm-pack build ../Dust/examples/morph --target web --out-name morph --out-dir ../../../home/dust
+wasm-pack build ../Dust/examples/wireframe --target web --out-name wireframe --out-dir ../../../home/dust
 
 rm dust/.gitignore
 rm dust/*.d.ts
