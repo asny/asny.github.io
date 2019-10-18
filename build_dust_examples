@@ -1,12 +1,15 @@
 #!/bin/sh
 
-wasm-pack build ../Dust/examples/hello_world --target web --out-name hello_world --out-dir ../../../home/dust
-wasm-pack build ../Dust/examples/lighting --target web --out-name lighting --out-dir ../../../home/dust
-wasm-pack build ../Dust/examples/texture --target web --out-name texture --out-dir ../../../home/dust
-wasm-pack build ../Dust/examples/effect --target web --out-name effect --out-dir ../../../home/dust
-wasm-pack build ../Dust/examples/morph --target web --out-name morph --out-dir ../../../home/dust
-wasm-pack build ../Dust/examples/wireframe --target web --out-name wireframe --out-dir ../../../home/dust
+cd ../Dust
+wasm-pack build examples/hello_world --target web --out-name hello_world --out-dir ../../../home/dust
+cargo run --example hello_world --release "../home/dust/hello_world.png"
+wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../home/dust
+wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../home/dust
+wasm-pack build examples/effect --target web --out-name effect --out-dir ../../../home/dust
+wasm-pack build examples/morph --target web --out-name morph --out-dir ../../../home/dust
+wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../home/dust
 
+cd ../home
 rm dust/.gitignore
 rm dust/*.d.ts
 rm dust/package.json
