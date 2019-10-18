@@ -311,8 +311,22 @@ function init(module) {
         const ret = getObject(arg0).width;
         return ret;
     };
+    imports.wbg.__widl_f_set_width_HTMLCanvasElement = function(arg0, arg1) {
+        getObject(arg0).width = arg1 >>> 0;
+    };
     imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
         const ret = getObject(arg0).height;
+        return ret;
+    };
+    imports.wbg.__widl_f_set_height_HTMLCanvasElement = function(arg0, arg1) {
+        getObject(arg0).height = arg1 >>> 0;
+    };
+    imports.wbg.__widl_f_offset_width_HTMLElement = function(arg0) {
+        const ret = getObject(arg0).offsetWidth;
+        return ret;
+    };
+    imports.wbg.__widl_f_offset_height_HTMLElement = function(arg0) {
+        const ret = getObject(arg0).offsetHeight;
         return ret;
     };
     imports.wbg.__widl_f_code_KeyboardEvent = function(arg0, arg1) {
@@ -688,6 +702,24 @@ function init(module) {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
+    imports.wbg.__wbindgen_closure_wrapper172 = function(arg0, arg1, arg2) {
+        const state = { a: arg0, b: arg1, cnt: 1 };
+        const real = () => {
+            state.cnt++;
+            const a = state.a;
+            state.a = 0;
+            try {
+                return __wbg_elem_binding0(a, state.b, );
+            } finally {
+                if (--state.cnt === 0) wasm.__wbg_function_table.get(28)(a, state.b);
+                else state.a = a;
+            }
+        }
+        ;
+        real.original = state;
+        const ret = real;
+        return addHeapObject(ret);
+    };
     imports.wbg.__wbindgen_closure_wrapper329 = function(arg0, arg1, arg2) {
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = (arg0) => {
@@ -706,7 +738,7 @@ function init(module) {
         const ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper325 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper331 = function(arg0, arg1, arg2) {
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = (arg0) => {
             state.cnt++;
@@ -724,25 +756,7 @@ function init(module) {
         const ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper168 = function(arg0, arg1, arg2) {
-        const state = { a: arg0, b: arg1, cnt: 1 };
-        const real = () => {
-            state.cnt++;
-            const a = state.a;
-            state.a = 0;
-            try {
-                return __wbg_elem_binding0(a, state.b, );
-            } finally {
-                if (--state.cnt === 0) wasm.__wbg_function_table.get(28)(a, state.b);
-                else state.a = a;
-            }
-        }
-        ;
-        real.original = state;
-        const ret = real;
-        return addHeapObject(ret);
-    };
-    imports.wbg.__wbindgen_closure_wrapper327 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper333 = function(arg0, arg1, arg2) {
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = (arg0) => {
             state.cnt++;
