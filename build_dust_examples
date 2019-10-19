@@ -14,6 +14,10 @@ cargo run --example morph --release "../home/dust/morph.png"
 wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../home/dust
 cargo run --example wireframe --release "../home/dust/wireframe.png"
 
+cd ../spider-game
+wasm-pack build --target web --out-name spider --out-dir ../home/dust
+cargo run --release "../home/dust/spider.png"
+
 cd ../home
 rm dust/.gitignore
 rm dust/*.d.ts
