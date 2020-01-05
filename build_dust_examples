@@ -13,6 +13,8 @@ wasm-pack build examples/morph --target web --out-name morph --out-dir ../../../
 cargo run --example morph --release "../home/dust/morph.png"
 wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../home/dust
 cargo run --example wireframe --release "../home/dust/wireframe.png"
+wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/dust
+cargo run --example imposters --release "../home/dust/imposters.png"
 
 cd ../spider-game
 wasm-pack build --target web --out-name spider --out-dir ../home/dust
