@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ../Dust
+wasm-pack build examples/hello_world --target web --out-name hello_world --out-dir ../../../home/dust
+#cargo run --example hello_world --release "../home/dust/hello_world.png"
+
+cd ../home
+rm dust/.gitignore
+rm dust/*.d.ts
+rm dust/package.json

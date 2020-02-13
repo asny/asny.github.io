@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ../spider-game
+wasm-pack build --target web --out-name spider --out-dir ../home/dust
+cargo run --release "../home/dust/spider.png"
+
+cd ../home
+rm dust/.gitignore
+rm dust/*.d.ts
+rm dust/package.json
