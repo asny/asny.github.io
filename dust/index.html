@@ -5,82 +5,120 @@
       body {
         background-color: white;
       }
+      div.row {
+        display: flex;
+        margin: 10px 0px 0px 0px
+      }
       div.text {
         text-align: center;
       }
-      div.img {
-        margin: 32px;
-        border: 3px solid black;
+      div.example {
         height: auto;
+        margin: 0px 4px 0px 4px
       }
-      div.img:hover {
-        border: 3px solid red;
+      h1 {
+        text-align: center;
+        color: #0033cc;
+      }
+      h4 {
+        text-align: center;
+        color: #0033cc;
       }
       img {
-        border-color: black;
+        border: 2px solid #99ccff;
+        height: auto;
+      }
+      img:hover {
+        border: 2px solid #0033cc;
       }
     </style>
   </head>
   <body>
     <div class="text">
       <h1>
-        WebAssembly + WebGL examples composed in Rust
+        Dust
       </h1>
-      <h3>
+      <h4>
+         WebAssembly + WebGL examples composed in Rust.
         Source: <a href=https://github.com/asny/Dust>github.com/asny/Dust</a>
-      </h3>
+      </h4>
     </div>
-    <div style="display: flex; justify-content: center">
-      <div class="img" width = 25%>
+    <div class="row">
+      <div class="example">
+        <h4>
+          Hello world
+        </h4>
         <a href="hello_world.html">
           <img src="hello_world.png" alt="Hello world example" width="100%" height="width">
         </a>
       </div>
 
-      <div class="img" width = 25%>
+      <div class="example">
+        <h4>
+          Lighting
+        </h4>
         <a href="lighting.html">
           <img src="lighting.png" alt="Lighting example" width="100%" height="width">
         </a>
       </div>
 
-      <div class="img" width = 25%>
+      <div class="example">
+        <h4>
+          Texture
+        </h4>
         <a href="texture.html">
           <img src="texture.png" alt="Texture example" width="100%" height="width">
         </a>
       </div>
     </div>
-    <div style="display: flex; justify-content: center">
-      <div class="img" width = 25%>
+    <div class="row">
+      <div class="example">
+        <h4>
+          After effects
+        </h4>
         <a href="effect.html">
           <img src="effect.png" alt="Effect example" width="100%" height="width">
         </a>
       </div>
 
-      <div class="img" width = 25%>
+      <div class="example">
+        <h4>
+          Instancing
+        </h4>
         <a href="wireframe.html">
           <img src="wireframe.png" alt="Wireframe example" width="100%" height="width">
         </a>
       </div>
-    </div>
-    <div style="display: flex; justify-content: center">
-      <div class="img" width = 25%>
+
+      <div class="example">
+        <h4>
+          Morp tool
+        </h4>
         <a href="morph.html">
           <img src="morph.png" alt="Morph example" width="100%" height="width">
         </a>
       </div>
+    </div>
+    <div class="row">
 
-      <div class="img" width = 25%>
+      <div class="example">
+        <h4>
+          Imposters
+        </h4>
         <a href="imposters.html">
           <img src="imposters.png" alt="Imposters example" width="100%" height="width">
         </a>
       </div>
-    </div>
-    <div style="display: flex; justify-content: center">
-      <div class="img" width = 80%>
+
+      <div class="example">
+        <h4>
+          Spider game
+        </h4>
         <a href="spider.html">
           <img src="spider.png" alt="Spider game" width="100%" height="width">
         </a>
       </div>
+
     </div>
   </body>
 </html>
