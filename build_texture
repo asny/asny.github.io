@@ -1,10 +1,10 @@
 #!/bin/sh
 
-cd ../Dust
-wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../home/dust
-#cargo run --example texture --release "../home/dust/texture.png"
+cd ../dust
+wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../home/three-d
+#cargo run --example texture --release "../home/three-d/texture.png"
 
 cd ../home
-rm dust/.gitignore
-rm dust/*.d.ts
-rm dust/package.json
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json

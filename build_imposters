@@ -1,10 +1,10 @@
 #!/bin/sh
 
-cd ../Dust
-wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/dust
-#cargo run --example imposters --release "../home/dust/imposters.png"
+cd ../dust
+wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/three-d
+#cargo run --example imposters --release "../home/three-d/imposters.png"
 
 cd ../home
-rm dust/.gitignore
-rm dust/*.d.ts
-rm dust/package.json
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json

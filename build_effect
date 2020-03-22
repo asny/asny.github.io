@@ -1,10 +1,10 @@
 #!/bin/sh
 
-cd ../Dust
-wasm-pack build examples/effect --target web --out-name effect --out-dir ../../../home/dust
-#cargo run --example effect --release "../home/dust/effect.png"
+cd ../dust
+wasm-pack build examples/effect --target web --out-name effect --out-dir ../../../home/three-d
+#cargo run --example effect --release "../home/three-d/effect.png"
 
 cd ../home
-rm dust/.gitignore
-rm dust/*.d.ts
-rm dust/package.json
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json

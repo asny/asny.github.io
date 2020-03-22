@@ -1,10 +1,10 @@
 #!/bin/sh
 
 cd ../Dust
-wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../home/dust
-#cargo run --example lighting --release "../home/dust/lighting.png"
+wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../home/three-d
+#cargo run --example lighting --release "../home/three-d/lighting.png"
 
 cd ../home
-rm dust/.gitignore
-rm dust/*.d.ts
-rm dust/package.json
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json
