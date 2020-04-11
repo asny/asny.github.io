@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ../tri-mesh
+wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../../../home/three-d
+cargo run --example mesh_tools --release "../home/three-d/mesh_tools.png"
+
+cd ../home
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json
