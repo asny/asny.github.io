@@ -9,8 +9,6 @@ wasm-pack build examples/texture --target web --out-name texture --out-dir ../..
 cargo run --example texture --release "../home/three-d/texture.png"
 wasm-pack build examples/effect --target web --out-name effect --out-dir ../../../home/three-d
 cargo run --example effect --release "../home/three-d/effect.png"
-wasm-pack build examples/morph --target web --out-name morph --out-dir ../../../home/three-d
-cargo run --example morph --release "../home/three-d/morph.png"
 wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../home/three-d
 cargo run --example wireframe --release "../home/three-d/wireframe.png"
 wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/three-d
@@ -22,10 +20,14 @@ wasm-pack build --target web --out-name spider --out-dir ../home/three-d
 cargo run --release "../home/three-d/spider.png"
 
 cd ../tri-mesh
-wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../home/three-d
-cargo run --release "../home/three-d/mesh_tools.png"
+wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../home/tri-mesh
+cargo run --release "../home/tri-mesh/mesh_tools.png"
 
 cd ../home
 rm three-d/.gitignore
 rm three-d/*.d.ts
 rm three-d/package.json
+
+rm tri-mesh/.gitignore
+rm tri-mesh/*.d.ts
+rm tri-mesh/package.json
