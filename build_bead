@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ../bead-designer
+wasm-pack build --target web --out-name bead --out-dir ../home/three-d
+cargo run --release "../home/three-d/bead.png"
+
+cd ../home
+rm three-d/.gitignore
+rm three-d/*.d.ts
+rm three-d/package.json
