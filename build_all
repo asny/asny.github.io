@@ -15,6 +15,8 @@ wasm-pack build examples/imposters --target web --out-name imposters --out-dir .
 cargo run --example imposters --release "../home/three-d/imposters.png"
 wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../home/three-d
 
+cp -R examples/assets/ ../home/three-d/examples/assets/
+
 cd ../spider-game
 wasm-pack build --target web --out-name spider --out-dir ../home/three-d
 cargo run --release "../home/three-d/spider.png"

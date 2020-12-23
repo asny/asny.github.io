@@ -2,7 +2,7 @@
 
 cd ../dust
 wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../home/three-d
-#cargo run --example texture --release "../home/three-d/texture.png"
+cargo run --example texture --release "../home/three-d/texture.png"
 
 cd ../home
 rm three-d/.gitignore
