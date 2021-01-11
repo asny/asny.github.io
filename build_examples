@@ -13,7 +13,8 @@ wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir .
 cargo run --example wireframe --release "../home/three-d/wireframe.png"
 wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/three-d
 cargo run --example imposters --release "../home/three-d/imposters.png"
-wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../home/three-d
+wasm-pack build examples/sprite --target web --out-name sprite --out-dir ../../../home/three-d
+cargo run --example sprite --release "../home/three-d/sprite.png"
 
 cp -R examples/assets/ ../home/three-d/examples/assets/
 
