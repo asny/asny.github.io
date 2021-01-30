@@ -1,24 +1,6 @@
 #!/bin/sh
 
 ./build_examples
-
-cd ../spider-game
-wasm-pack build --target web --out-name spider --out-dir ../home/three-d
-cargo run --release "../home/three-d/spider.png"
-
-cd ../tri-mesh
-wasm-pack build examples/mesh_tools --target web --out-name mesh_tools --out-dir ../../../home/tri-mesh
-cargo run --example mesh_tools --release "../home/tri-mesh/mesh_tools.png"
-
-cd ../bead-designer
-wasm-pack build --target web --out-name bead --out-dir ../home/three-d
-cargo run --release "../home/three-d/bead.png"
-
-cd ../home
-rm three-d/.gitignore
-rm three-d/*.d.ts
-rm three-d/package.json
-
-rm tri-mesh/.gitignore
-rm tri-mesh/*.d.ts
-rm tri-mesh/package.json
+./build_spider
+./build_mesh_tools
+./build_bead

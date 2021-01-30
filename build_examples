@@ -9,6 +9,10 @@ wasm-pack build examples/texture --target web --out-name texture --out-dir ../..
 cargo run --example texture --release "../home/three-d/texture.png"
 wasm-pack build examples/effect --target web --out-name effect --out-dir ../../../home/three-d
 cargo run --example effect --release "../home/three-d/effect.png"
+wasm-pack build examples/fireworks --target web --out-name fireworks --out-dir ../../../home/three-d
+cargo run --example fireworks --release "../home/three-d/fireworks.png"
+wasm-pack build examples/mandelbrot --target web --out-name mandelbrot --out-dir ../../../home/three-d
+cargo run --example mandelbrot --release "../home/three-d/mandelbrot.png"
 wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../home/three-d
 cargo run --example wireframe --release "../home/three-d/wireframe.png"
 wasm-pack build examples/imposters --target web --out-name imposters --out-dir ../../../home/three-d
