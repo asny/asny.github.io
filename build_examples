@@ -19,6 +19,8 @@ wasm-pack build examples/forest --target web --out-name forest --out-dir ../../.
 cargo run --example forest --release "../asny.github.io/three-d/forest.png"
 wasm-pack build examples/fog --target web --out-name fog --out-dir ../../../asny.github.io/three-d
 cargo run --example fog --release "../asny.github.io/three-d/fog.png"
+wasm-pack build examples/pbr --target web --out-name pbr --out-dir ../../../asny.github.io/three-d
+cargo run --example pbr --release "../asny.github.io/three-d/pbr.png"
 
 cp -R examples/assets/ ../asny.github.io/three-d/examples/assets/
 
