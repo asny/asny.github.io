@@ -1,34 +1,34 @@
 #!/bin/sh
 
 cd ../three-d
-wasm-pack build examples/triangle --target web --out-name triangle --out-dir ../../../asny.github.io/three-d
-cargo run --example triangle --release "../asny.github.io/three-d/triangle.png"
-wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../asny.github.io/three-d
-cargo run --example lighting --release "../asny.github.io/three-d/lighting.png"
-wasm-pack build examples/statues --target web --out-name statues --out-dir ../../../asny.github.io/three-d
-cargo run --example statues --release "../asny.github.io/three-d/statues.png"
-wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../asny.github.io/three-d
-cargo run --example texture --release "../asny.github.io/three-d/texture.png"
-wasm-pack build examples/fireworks --target web --out-name fireworks --out-dir ../../../asny.github.io/three-d
-cargo run --example fireworks --release "../asny.github.io/three-d/fireworks.png"
-wasm-pack build examples/mandelbrot --target web --out-name mandelbrot --out-dir ../../../asny.github.io/three-d
-cargo run --example mandelbrot --release "../asny.github.io/three-d/mandelbrot.png"
-wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../asny.github.io/three-d
-cargo run --example wireframe --release "../asny.github.io/three-d/wireframe.png"
-wasm-pack build examples/forest --target web --out-name forest --out-dir ../../../asny.github.io/three-d
-cargo run --example forest --release "../asny.github.io/three-d/forest.png"
-wasm-pack build examples/fog --target web --out-name fog --out-dir ../../../asny.github.io/three-d
-cargo run --example fog --release "../asny.github.io/three-d/fog.png"
-wasm-pack build examples/pbr --target web --out-name pbr --out-dir ../../../asny.github.io/three-d
-cargo run --example pbr --release "../asny.github.io/three-d/pbr.png"
-wasm-pack build examples/shapes --target web --out-name shapes --out-dir ../../../asny.github.io/three-d
-cargo run --example shapes --release "../asny.github.io/three-d/shapes.png"
-wasm-pack build examples/shapes2d --target web --out-name shapes2d --out-dir ../../../asny.github.io/three-d
-cargo run --example shapes2d --release "../asny.github.io/three-d/shapes2d.png"
-wasm-pack build examples/picking --target web --out-name picking --out-dir ../../../asny.github.io/three-d
-cargo run --example picking --release "../asny.github.io/three-d/picking.png"
+wasm-pack build examples/triangle --target web --out-name triangle --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example triangle --release "../asny.github.io/three-d/0.10/triangle.png"
+wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example lighting --release "../asny.github.io/three-d/0.10/lighting.png"
+wasm-pack build examples/statues --target web --out-name statues --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example statues --release "../asny.github.io/three-d/0.10/statues.png"
+wasm-pack build examples/texture --target web --out-name texture --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example texture --release "../asny.github.io/three-d/0.10/texture.png"
+wasm-pack build examples/fireworks --target web --out-name fireworks --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example fireworks --release "../asny.github.io/three-d/0.10/fireworks.png"
+wasm-pack build examples/mandelbrot --target web --out-name mandelbrot --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example mandelbrot --release "../asny.github.io/three-d/0.10/mandelbrot.png"
+wasm-pack build examples/wireframe --target web --out-name wireframe --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example wireframe --release "../asny.github.io/three-d/0.10/wireframe.png"
+wasm-pack build examples/forest --target web --out-name forest --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example forest --release "../asny.github.io/three-d/0.10/forest.png"
+wasm-pack build examples/fog --target web --out-name fog --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example fog --release "../asny.github.io/three-d/0.10/fog.png"
+wasm-pack build examples/pbr --target web --out-name pbr --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example pbr --release "../asny.github.io/three-d/0.10/pbr.png"
+wasm-pack build examples/shapes --target web --out-name shapes --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example shapes --release "../asny.github.io/three-d/0.10/shapes.png"
+wasm-pack build examples/shapes2d --target web --out-name shapes2d --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example shapes2d --release "../asny.github.io/three-d/0.10/shapes2d.png"
+wasm-pack build examples/picking --target web --out-name picking --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example picking --release "../asny.github.io/three-d/0.10/picking.png"
 
-cp -R examples/assets/ ../asny.github.io/three-d/examples/assets/
+cp -R examples/assets/ ../asny.github.io/three-d/0.10/examples/assets/
 
 cd ../asny.github.io
 rm three-d/.gitignore
