@@ -21,6 +21,12 @@ wasm-pack build examples/fog --target web --out-name fog --out-dir ../../../asny
 cargo run --example fog --release "../asny.github.io/three-d/fog.png"
 wasm-pack build examples/pbr --target web --out-name pbr --out-dir ../../../asny.github.io/three-d
 cargo run --example pbr --release "../asny.github.io/three-d/pbr.png"
+wasm-pack build examples/shapes --target web --out-name shapes --out-dir ../../../asny.github.io/three-d
+cargo run --example shapes --release "../asny.github.io/three-d/shapes.png"
+wasm-pack build examples/shapes2d --target web --out-name shapes2d --out-dir ../../../asny.github.io/three-d
+cargo run --example shapes2d --release "../asny.github.io/three-d/shapes2d.png"
+wasm-pack build examples/picking --target web --out-name picking --out-dir ../../../asny.github.io/three-d
+cargo run --example picking --release "../asny.github.io/three-d/picking.png"
 
 cp -R examples/assets/ ../asny.github.io/three-d/examples/assets/
 
