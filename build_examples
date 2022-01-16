@@ -33,6 +33,8 @@ wasm-pack build examples/normals --target web --out-name normals --out-dir ../..
 cargo run --example normals --release "../asny.github.io/three-d/0.10/normals.png"
 wasm-pack build examples/image --target web --out-name image --out-dir ../../../asny.github.io/three-d/0.10
 cargo run --example image --release "../asny.github.io/three-d/0.10/image.png"
+wasm-pack build examples/logo --target web --out-name logo --out-dir ../../../asny.github.io/three-d/0.10
+cargo run --example logo --release "../asny.github.io/three-d/0.10/logo.png"
 
 cp -R examples/assets/ ../asny.github.io/three-d/0.10/examples/assets/
 
