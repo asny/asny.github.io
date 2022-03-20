@@ -3,6 +3,8 @@
 cd ../three-d
 wasm-pack build examples/triangle --target web --out-name triangle --out-dir ../../../asny.github.io/three-d/0.11
 cargo run --example triangle --release "../asny.github.io/three-d/0.11/triangle.png"
+wasm-pack build examples/volume --target web --out-name volume --out-dir ../../../asny.github.io/three-d/0.11
+cargo run --example volume --release "../asny.github.io/three-d/0.11/volume.png"
 wasm-pack build examples/lighting --target web --out-name lighting --out-dir ../../../asny.github.io/three-d/0.11
 cargo run --example lighting --release "../asny.github.io/three-d/0.11/lighting.png"
 wasm-pack build examples/lights --target web --out-name lights --out-dir ../../../asny.github.io/three-d/0.11
