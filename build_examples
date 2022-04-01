@@ -2,10 +2,16 @@
 
 cd ../three-d
 
-for EXAMPLE in triangle shapes2d shapes volume texture mandelbrot logo image fog picking normals fireworks wireframe sprites forest environment pbr lighting lights statues
+for EXAMPLE in triangle fireworks shapes2d shapes volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
 do 
+    export THREE_D_SCREENSHOT="../asny.github.io/three-d/0.11/$EXAMPLE.png"
+    if [ $EXAMPLE == fireworks ]; then
+        export THREE_D_EXIT=1500
+    else
+        export THREE_D_EXIT=0
+    fi
+    cargo run --example $EXAMPLE --release
     wasm-pack build examples/$EXAMPLE --target web --out-name $EXAMPLE --out-dir ../../../asny.github.io/three-d/0.11
-    cargo run --example $EXAMPLE --release "../asny.github.io/three-d/0.11/$EXAMPLE.png"
 done
 
 cp -R examples/assets/ ../asny.github.io/three-d/0.11/examples/assets/
