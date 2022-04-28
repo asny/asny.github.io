@@ -3,6 +3,7 @@
 VERSION=0.12
 
 cd ../three-d
+rm pkg/*
 
 for EXAMPLE in triangle fireworks shapes2d shapes screen volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
 do 
@@ -13,13 +14,13 @@ do
         export THREE_D_EXIT=0
     fi
     cargo run --example $EXAMPLE --release
-    wasm-pack build examples/$EXAMPLE --target web --out-name $EXAMPLE --out-dir ../../../asny.github.io/three-d/$VERSION
+    wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg
+    
+    mv pkg/$EXAMPLE.js ../asny.github.io/three-d/$VERSION/
+    mv pkg/$EXAMPLE_bg.wasm ../asny.github.io/three-d/$VERSION/
+    rm pkg/*
 done
 
 mkdir ../asny.github.io/three-d/$VERSION/examples
 mkdir ../asny.github.io/three-d/$VERSION/examples/assets
 cp -R examples/assets/ ../asny.github.io/three-d/$VERSION/examples/assets/
-
-cd ../asny.github.io
-rm three-d/$VERSION/.gitignore
-rm three-d/$VERSION/*.d.ts
