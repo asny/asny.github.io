@@ -1,0 +1,13 @@
+#!/bin/sh
+
+VERSION=0.12
+
+cd ../three-d/examples
+
+for EXAMPLE in triangle fireworks shapes2d shapes screen volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
+do 
+    cd $EXAMPLE
+    cargo update
+    cargo clean
+    cd ..
+done
