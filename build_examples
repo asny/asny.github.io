@@ -1,13 +1,11 @@
 #!/bin/sh
 
-VERSION=0.12
-
 cd ../three-d
 rm pkg/*
 
 for EXAMPLE in triangle fireworks shapes2d shapes screen volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
 do 
-    export THREE_D_SCREENSHOT="../asny.github.io/three-d/$VERSION/$EXAMPLE.png"
+    export THREE_D_SCREENSHOT="../asny.github.io/three-d/$1/$EXAMPLE.png"
     if [ $EXAMPLE == fireworks ]; then
         export THREE_D_EXIT=1500
     else
@@ -17,11 +15,11 @@ do
     
     wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg
     
-    mv pkg/*.js ../asny.github.io/three-d/$VERSION/
-    mv pkg/*.wasm ../asny.github.io/three-d/$VERSION/
+    mv pkg/*.js ../asny.github.io/three-d/$1/
+    mv pkg/*.wasm ../asny.github.io/three-d/$1/
     rm pkg/*
 done
 
-mkdir ../asny.github.io/three-d/$VERSION/examples
-mkdir ../asny.github.io/three-d/$VERSION/examples/assets
-cp -R examples/assets/ ../asny.github.io/three-d/$VERSION/examples/assets/
+mkdir ../asny.github.io/three-d/$1/examples
+mkdir ../asny.github.io/three-d/$1/examples/assets
+cp -R examples/assets/ ../asny.github.io/three-d/$1/examples/assets/
