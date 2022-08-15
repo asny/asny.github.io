@@ -12,7 +12,7 @@ do
     else
         export THREE_D_EXIT=0
     fi
-    cargo run --example $EXAMPLE --release
+    cargo run --example $EXAMPLE --release --features="egui-gui"
     
     wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg
     
