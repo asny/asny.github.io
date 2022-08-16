@@ -14,7 +14,7 @@ do
     fi
     cargo run --example $EXAMPLE --release --features="egui-gui"
     
-    wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg
+    wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg --out-name $EXAMPLE
     
     mv pkg/*.js ../asny.github.io/three-d/$1/
     mv pkg/*.wasm ../asny.github.io/three-d/$1/
