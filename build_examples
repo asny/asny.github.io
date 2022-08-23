@@ -3,7 +3,7 @@
 cd ../three-d
 rm pkg/*
 
-for EXAMPLE in triangle fireworks shapes2d shapes screen volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
+for EXAMPLE in triangle point_cloud fireworks shapes2d shapes screen volume texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
 do 
     echo $EXAMPLE
     export THREE_D_SCREENSHOT="../asny.github.io/three-d/$1/$EXAMPLE.png"
