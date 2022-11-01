@@ -3,22 +3,29 @@
 cd ../three-d
 rm pkg/*
 
-for EXAMPLE in triangle point_cloud fireworks shapes2d shapes screen volume terrain texture mandelbrot logo image fog picking normals wireframe sprites forest environment pbr lighting lights statues
+cd examples
+examples=`ls -d *`
+cd ..
+
+for EXAMPLE in $examples
 do 
-    echo $EXAMPLE
-    export THREE_D_SCREENSHOT="../asny.github.io/three-d/$1/$EXAMPLE.png"
-    if [ $EXAMPLE == fireworks ]; then
-        export THREE_D_EXIT=1500
-    else
-        export THREE_D_EXIT=0
+    if [ $EXAMPLE != 'README.md' ] && [ $EXAMPLE != 'assets' ]
+    then
+        echo $EXAMPLE
+        export THREE_D_SCREENSHOT="../asny.github.io/three-d/$1/$EXAMPLE.png"
+        if [ $EXAMPLE == fireworks ]; then
+            export THREE_D_EXIT=1500
+        else
+            export THREE_D_EXIT=0
+        fi
+        cargo run --example $EXAMPLE --release --features="egui-gui"
+        
+        wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg --out-name $EXAMPLE
+        
+        mv pkg/*.js ../asny.github.io/three-d/$1/
+        mv pkg/*.wasm ../asny.github.io/three-d/$1/
+        rm pkg/*
     fi
-    cargo run --example $EXAMPLE --release --features="egui-gui"
-    
-    wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg --out-name $EXAMPLE
-    
-    mv pkg/*.js ../asny.github.io/three-d/$1/
-    mv pkg/*.wasm ../asny.github.io/three-d/$1/
-    rm pkg/*
 done
 
 mkdir ../asny.github.io/three-d/$1/examples
