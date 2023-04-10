@@ -16,9 +16,9 @@ do
         if [ $EXAMPLE == fireworks ]; then
             export THREE_D_EXIT=1500
         else
-            export THREE_D_EXIT=100
+            export THREE_D_EXIT=300
         fi
-        cargo run --example $EXAMPLE --release --no-default-features --features="egui-gui, test"
+        cargo run --example $EXAMPLE --release --all-features
         
         wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg --out-name $EXAMPLE
         
