@@ -16,7 +16,7 @@ do
         if [ $EXAMPLE == fireworks ]; then
             export THREE_D_EXIT=1500
         else
-            export THREE_D_EXIT=300
+            export THREE_D_EXIT=500
         fi
         cargo run --example $EXAMPLE --release --all-features
         
