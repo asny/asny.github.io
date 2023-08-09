@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd ../three-d
-rm pkg/*
+rm web/pkg/*
 
 cd examples
 examples=`ls -d *`
@@ -20,11 +20,11 @@ do
         fi
         cargo run --example $EXAMPLE --release --all-features
         
-        wasm-pack build examples/$EXAMPLE --target web --out-dir ../../pkg --out-name $EXAMPLE
+        wasm-pack build examples/$EXAMPLE --target web --out-dir ../../web/pkg --out-name $EXAMPLE
         
-        mv pkg/*.js ../asny.github.io/three-d/$1/
-        mv pkg/*.wasm ../asny.github.io/three-d/$1/
-        rm pkg/*
+        mv web/pkg/*.js ../asny.github.io/three-d/$1/
+        mv web/pkg/*.wasm ../asny.github.io/three-d/$1/
+        rm web/pkg/*
     fi
 done
 
