@@ -101,6 +101,7 @@ function passStringToWasm0(arg, malloc, realloc) {
         const ret = encodeString(arg, view);
 
         offset += ret.written;
+        ptr = realloc(ptr, len, offset, 1) >>> 0;
     }
 
     WASM_VECTOR_LEN = offset;
@@ -179,19 +180,19 @@ function __wbg_get_imports() {
         const ret = getStringFromWasm0(arg0, arg1);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbg_debug_9a6b3243fbbebb61 = function(arg0) {
+    imports.wbg.__wbg_debug_7d82cf3cd21e00b0 = function(arg0) {
         console.debug(getObject(arg0));
     };
-    imports.wbg.__wbg_error_788ae33f81d3b84b = function(arg0) {
+    imports.wbg.__wbg_error_b834525fe62708f5 = function(arg0) {
         console.error(getObject(arg0));
     };
-    imports.wbg.__wbg_info_2e30e8204b29d91d = function(arg0) {
+    imports.wbg.__wbg_info_12174227444ccc71 = function(arg0) {
         console.info(getObject(arg0));
     };
-    imports.wbg.__wbg_log_1d3ae0273d8f4f8a = function(arg0) {
+    imports.wbg.__wbg_log_79d3c56888567995 = function(arg0) {
         console.log(getObject(arg0));
     };
-    imports.wbg.__wbg_warn_d60e832f9882c1b2 = function(arg0) {
+    imports.wbg.__wbg_warn_2a68e3ab54e55f28 = function(arg0) {
         console.warn(getObject(arg0));
     };
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
