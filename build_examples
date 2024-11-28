@@ -13,7 +13,7 @@ do
     then
         echo $EXAMPLE
         export THREE_D_SCREENSHOT="../asny.github.io/three-d/$1/$EXAMPLE.png"
-        if [ $EXAMPLE == fireworks ]; then
+        if [ $EXAMPLE == particles ]; then
             export THREE_D_EXIT=1500
         else
             export THREE_D_EXIT=500
